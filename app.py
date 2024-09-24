@@ -1,11 +1,14 @@
-from newapp import *
+try:
+    from newapp import *
+except:
+    pass
 from flask import Flask, render_template, request, redirect
 
 from datetime import datetime
 import pymongo 
-client=pymongo.MongoClient("mongodb+srv://saksham:qk70nd97a@cluster1.vucvhcs.mongodb.net/?retryWrites=true&w=majority")
-db=client["healthAI_logins"]  #It is the DATABASE
-collection=db['data']   #It is My COLLECTON
+# client=pymongo.MongoClient("mongodb+srv://saksham:qk70nd97a@cluster1.vucvhcs.mongodb.net/?retryWrites=true&w=majority")
+# db=client["healthAI_logins"]  #It is the DATABASE
+# collection=db['data']   #It is My COLLECTON
 
 app = Flask(__name__)
 # app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///my_test_db.sqlite3"
